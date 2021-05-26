@@ -83,7 +83,16 @@ export class ApiFailure extends ApiResult<any> {}
 export class ApiSuggestion extends ApiResult<any> {}
 export class ApiError extends ApiResult<any> {}
 
-export class BaseResponseDto{
+export class BaseResponseDto {
    userId: number
    id: number
+}
+
+export class ErrorResponse<T> extends ApiResult<T> {
+    message: string
+    constructor(message: string = null) {
+        super(null)
+        this.message = message
+    }
+
 }

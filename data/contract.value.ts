@@ -3,10 +3,17 @@ export class ContractValue {
     static DEFAULT_AUTH_HEADER='authorization'
     static SECRET_KEY='KAWADI-SECRET-KEY'
 
+    public static POST_FEED_TYPE_TEXT = 0
 
-    public static KAWADI_BOOK_REQUESTED = 0 
-    public static KAWADI_BOOK_PROCESSED = 1 
-    public static KAWADI_BOOK_SUCCESS = 2
-    public static KAWADI_BOOK_FAILURE = 3
-    public static KAWADI_BOOK_HALT = 4
+    /**
+     * PostFeed Scope
+     */
+    public static PUBLIC_DATA_SCOPE = 0
+    public static FRIENDS_DATA_SCOPE = 1
+    public static PRIVATE_DATA_SCOPE = 2
+
+    /**
+     * Scheduler config
+     */
+    public static POSTFEED_TEXT_SCHEDULER = "POSTFEED_TEXT_SCHEDULER"
 }
